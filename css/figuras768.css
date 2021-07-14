@@ -1,0 +1,47 @@
+@media (min-width: 768px){
+    /* ------------------------------
+            HEADER
+    ------------------------------ */
+    .header_picture-img {
+        width: 15%;
+        margin-right: .5rem;
+    }
+    .header_picture-title {
+        font-size: 4.5rem;
+    }
+    .header-subtitle {
+        font-size: 3rem;
+        padding-bottom: 1rem;
+    }
+
+    /* ------------------------------
+            CONTENEDORES
+    ------------------------------ */
+    .container {
+        width: 80%;
+        font-size: 3rem;
+    }
+    .container-title{
+        font-size: 4.5rem;
+    }
+    .container_form {
+        width: 90%;
+        padding: 1rem 0;
+    }
+    .container_form input {
+        font-size: 2rem;
+    }
+    .container_form_buttons button {
+        font-size: 2rem;
+        width: 40%;
+        margin: 1rem;
+        padding: 1.5rem 0;
+    }
+
+    /* ------------------------------
+            JQUERYCONFIRM
+    ------------------------------ */
+    .jquery_confirm_form input {
+        font-size: 2rem;
+    }
+}

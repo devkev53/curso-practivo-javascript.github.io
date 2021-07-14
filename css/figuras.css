@@ -1,0 +1,165 @@
+/* Reseteando los estilos de los navegadores*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 1.6rem;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #0f0c29; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* ------------------------------
+            HEADER
+------------------------------ */
+.header {
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+.header_picture {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+.header_picture-img {
+    width: 10%;
+    margin-right: .5rem;
+}
+.header_picture-title {
+    font-size: 2.8rem;
+}
+.header-subtitle {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+/* ------------------------------
+            MAIN
+------------------------------ */
+main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* ------------------------------
+            SECCIONES
+------------------------------ */
+section {
+    border: .1rem solid #c2c2c2;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, .1);
+}
+/* ------------------------------
+            CONTENEDORES
+------------------------------ */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.container-title i{
+    margin-right: 1rem;
+    padding: 1rem 0;
+}
+.container_form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.container_form label {
+    width: 100%;
+}
+.container_form input {
+    outline: none;
+    padding: 0 1rem;
+}
+.container_form-input {
+    width: 100%;
+    margin: 1rem 0;
+}
+.container_form_buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container_form_buttons button {
+    width: 48%;
+    border-radius: .5rem;
+    border: none;
+    padding: .5rem 0;
+    box-shadow: .2rem .2rem .5rem #000;
+    transition: .3s ease all;
+}
+.container_form_buttons-perimetro {
+    color: whitesmoke;
+    background-color: #b53dbb;
+}
+.container_form_buttons-area {
+    color: whitesmoke;
+    background-color: #1b7e5d;
+}
+.container_form_buttons-area:hover {
+    background-color: #0b523a;
+}
+.container_form_buttons-perimetro:hover {
+    color: whitesmoke;
+    background-color: #d861df;
+}
+
+/* ------------------------------
+            TRIANGULO
+------------------------------ */
+.triangulo_lados {
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+.triangulo_lados .container_form-input {
+    width: 50%;
+    margin: 1rem 0;
+}
+
+/* ------------------------------
+            JQUERYCONFIRM
+------------------------------ */
+.jc-bs3-container.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: #000;
+}
+.jquery_confirm_form {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.jquery_confirm_form label {
+    width: 100%;
+}
+.jquery_confirm_form input {
+    margin-left: 1rem;
+    width: 20%;
+    border: none;
+    background: #c2c2c2;
+    border-radius: .5rem;
+    padding: .5rem;
+    outline: none;
+}

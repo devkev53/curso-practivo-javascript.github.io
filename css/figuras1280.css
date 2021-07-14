@@ -1,0 +1,53 @@
+@media (min-width: 1024px){
+    /* ------------------------------
+            HEADER
+    ------------------------------ */
+    .header_picture-img {
+        width: 8%;
+        margin-right: 2rem;
+    }
+    .header-subtitle {
+        font-size: 4rem;
+        padding-bottom: 1rem;
+    }
+    /* ------------------------------
+            MAIN
+    ------------------------------ */
+    main {
+        width: 80%;
+        justify-content: space-around;
+        padding: 0 3rem;
+    }
+    /* ------------------------------
+            CONTENEDORES
+    ------------------------------ */
+    .container {
+        width: 44%;
+        font-size: 2.5rem;
+        margin: 2rem;
+    }
+    .container-title{
+        font-size: 5.5rem;
+    }
+    .container_form {
+        width: 90%;
+        padding: 1.5rem .5rem;
+    }
+    .container_form input {
+        font-size: 2rem;
+        border-radius: 1rem;
+    }
+    .container_form_buttons button {
+        font-size: 2.5rem;
+        width: 40%;
+        margin: 1rem;
+        padding: 1.5rem 0;
+    }
+
+    /* ------------------------------
+            JQUERYCONFIRM
+    ------------------------------ */
+    .jquery_confirm_form input {
+        font-size: 2rem;
+    }
+}
