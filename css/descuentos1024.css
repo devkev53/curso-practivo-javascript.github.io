@@ -1,0 +1,163 @@
+:root {
+    --color_1: #f1e3cc;
+    --bg_color: #0e242f;
+    --color_3: #ff4e62;
+    --color_4: #ffb338;
+    --bg_color2: #181717;
+    /* --bg_color2: #ab4dcf;
+    --bg_color3: #2f0434;
+    --bg_color4: #626364;  */
+    --bg_color3: #343d5b;
+    --focus_color_1: #2396f9;
+}
+@media (min-width: 1024px) {
+    /* -----------------------------------------------
+                * - * - * HEADER * - * - *
+    ----------------------------------------------- */
+    .header {
+        width: 100%;
+    }
+    /* ______________________
+            NAVBAR
+    ______________________ */
+    .header_navbar {
+        height: 8vh;
+        position: relative;
+        width: 100%;
+    }
+    .header_navbar_container {
+        justify-content: end;
+        width: 95%;
+    }
+    .header_navbar_container_link {
+        width: auto;
+    }
+    .header_navbar_container_link_element picture {
+        justify-content: start;
+        width: 40rem;
+    }
+    .logo {
+        position: absolute;
+        left: 0;
+        margin-left: 3rem;
+    }
+    .header_navbar_container_link_element picture img {
+        width: 15%;
+    }
+    .header_navbar_container_link_element picture h2{
+        display: flex;
+    }
+    .header_navbar_container_link_element {
+        font-size: 2rem;
+        padding: 2rem;
+        height: 10vh;
+        align-items: center;
+        transition: .3s ease all;
+    }
+    .header_navbar_container_link_element span {
+        display: flex;
+        margin-left: 1rem;
+    }
+    .header_navbar_container_link_element:hover {
+        background-color: var(--bg_color2);
+    }
+    .logo > .header_navbar_container_link_element:hover{
+        background-color: var(--bg_color);
+    }
+    /* ______________________
+            PICTURE
+    ______________________ */
+    .header_titulo_conteneder {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        margin-top: auto;
+        height: auto;
+    }
+    .header_titulo_conteneder_picture {
+        width: 60%;
+        margin: 1rem 0;
+        justify-content: center;
+    }
+    .header_titulo_conteneder_picture img {
+        display: flex;
+        width: 10%;
+        margin-right: 1rem;
+    }
+    .header_titulo_conteneder_picture h1 {
+        font-size: 4rem;
+    }
+    .header_titulo_conteneder-subtitle {
+        font-size: 2rem;
+    }
+    /* -----------------------------------------------
+               * - * - * MAIN * - * - *
+    ----------------------------------------------- */
+    main {
+        height: auto;
+        max-height: auto;
+        margin-top: 0;
+    }
+    /* _______________________________
+                SECCION
+    _______________________________ */
+    .calculaContainer {
+        width: 35%;
+        font-size: 3rem;
+    }
+    .calculaContainer-title {
+        font-size: 3.5rem;
+        justify-content: center;
+    }
+    .calculaContainer span {
+        font-size: 2rem;
+    }
+    .calculaContainer_form {
+        font-size: 1.6rem;
+    }
+    .calculaContainer_form input {
+        padding: .5rem .5rem;
+        font-size: 1.6rem;
+        border-radius: 1rem;
+    }
+    .calculaContainer_form button {
+        font-size: 2rem;
+        margin: 1rem;
+        border-radius: 1rem;
+    }
+    .calculaContainer > .resultado.active {
+        font-size: 2rem;
+    }
+    /* -----------------------------------------------
+                * - * - * FOOTER * - * - *
+    ----------------------------------------------- */
+    .footer {
+        height: auto;
+        top: unset;
+        bottom: 0;
+        padding: 1rem 0;
+        font-size: 1.6rem;
+    }
+    .footer_container {
+        width: 10%;
+        font-size: 3.5rem;
+    }
+}
+@media (min-width: 1366px) {
+    /* -----------------------------------------------
+                * - * - * HEADER * - * - *
+    ----------------------------------------------- */
+
+    .header_titulo_conteneder_picture img {
+        width: 7%;
+    }
+    /* -----------------------------------------------
+               * - * - * MAIN * - * - *
+    ----------------------------------------------- */
+    /* -----------------------------------------------
+                * - * - * FOOTER * - * - *
+    ----------------------------------------------- */
+    .footer_container {
+        width: 10%;
+        font-size: 2rem;
+    }
+}
