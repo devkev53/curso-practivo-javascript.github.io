@@ -1,0 +1,165 @@
+/* -----------------------------------------------
+    * - * - * VARIABLES A USAR * - * - *
+----------------------------------------------- */
+:root {
+    --color_1: #f1e3cc;
+    --color_3: #ff4e62;
+    --color_4: #ffb338;
+    --bg_color: #0e242f;
+    --bg_color2: #181717;
+    --bg_color3: #343d5b;
+}
+/* -----------------------------------------------
+    * - * - * RESETEANDO ESTILOS * - * - *
+----------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(to right, #0d290c, #3f632b, #243e2a);
+}
+/* -----------------------------------------------
+            * - * - * HEADER * - * - *
+----------------------------------------------- */
+.header, .header_navbar{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--bg_color);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: var(--color_1);
+}
+.header_navbar{
+    height: 6rem;
+    width: 100%;
+    justify-content: start;
+    position: fixed;
+    bottom: 0;
+    transition: .3s all ease;
+}
+
+/* Estilos de Logo KodePrint */
+.header_navbar_logo {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    color: var(--color_1);
+    text-decoration: none;
+    width: 25%;
+}
+.header_navbar_logo picture {
+    display: flex;
+    align-items: center;
+}
+.header_navbar_logo picture img {
+    height: 5rem;
+}
+.header_navbar_logo picture h2 {
+    display: none;
+}
+
+/* Estilos de la lista */
+.header_navbar_list {
+    list-style: none;
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+}
+.header_navbar_list_link {
+    color: var(--color_1);
+    text-decoration: none;
+    font-size: 3.5rem;
+    transition: .3s ease all;
+}
+.header_navbar_list_link:hover {
+    color: var(--color_4);
+    filter: blur(.1rem);
+    transform: scale(120%);
+}
+.header_navbar_list_link-element span {
+    display: none;
+}
+/* -----------------------------------------------
+            * - * - * MAIN * - * - *
+----------------------------------------------- */
+main {
+}
+/* -----------------------------------------------
+            * - * - * FOOTER * - * - *
+----------------------------------------------- */
+.footer {
+    height: 5rem;
+    display: flex;
+    position: fixed;
+    top: 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    transition: .3s ease all;
+    background-color: var(--bg_color);
+    color:  var(--color_1);
+}
+.footer_container {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    align-items: center;
+    justify-content: space-around;
+    order: 2;
+}
+.footer_container_link {
+    font-size: 3rem;
+    text-decoration: none;
+}
+.footer_container_link:hover {
+    filter: blur(.15rem);
+    transform: scale(130%);
+}
+.footer_container_link-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+.footer_container_link-element::after{
+    content: "";
+    width: 2.2rem;
+    height: 2.2rem;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 15%;
+}
+.footer_container_link-element .fab {
+    z-index: 3;
+}
+.fa-linkedin {
+    color: #0E76A8;
+}
+.fa-github-square {
+    color: purple;
+}
+.fa-youtube-square {
+    color: #C4302b;
+}
+.footer_info {
+    display: flex;
+    width: 45%;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+}
+.index.scroll > .footer {
+    margin-top: -5rem;
+}

@@ -20,20 +20,16 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
+.index {
+    background: linear-gradient(to right, #0d290c, #3f632b, #243e2a);
+}
 body {
     font-size: 1.6rem;
     color: whitesmoke;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background: #290c27; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #290c18, #632b57, #3e2435); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #290c20, #632b50, #3e2437); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.index {
-    background: #0c2919; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0c290e, #2b6330, #243e25); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0d290c, #3f632b, #243e2a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #290c20, #632b50, #3e2437);
 }
 /* -----------------------------------------------
             * - * - * HEADER * - * - *
