@@ -7,10 +7,13 @@
     <title>Talleres JS | Curso practico de JS</title>
     <!-- Title Icon -->
     <link rel="shortcut icon" href="./assets/kp_black.ico" />
+    <!-- JQueryConfirm -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
     <!-- Font Awesome -->
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet">
     <!-- Mi CSS -->
     <link rel="stylesheet" href="./css/figuras/styles.css">
+    <link rel="stylesheet" href="./css/figuras/styles768.css">
 </head>
 <body class="index body">
     <header class="header">
@@ -52,7 +55,7 @@
                 <span class="main_shapes-span">Selecciona la figura</span>
                 <div class="main_shapes_container">
                     <button class="square"><i class="fad fa-square-full"></i></button>
-                    <button class="triangle"><i class="fad fa-triangle"></i></button>
+                    <button class="triangle selected"><i class="fad fa-triangle"></i></button>
                     <button class="circle"><i class="fad fa-circle"></i></button>
                 </div>
             </div>
@@ -66,8 +69,8 @@
                     <input type="number" id="ladosCuadrado">
                 </div>
                 <div class="formShape_buttons">
-                    <button class="main_container_form-perimetro">Calcular Perimetro</button>
-                    <button class="main_container_form-area">Calcular Area</button>
+                    <button type="button" class="main_container_form-perimetro" onclick="calcularPerimetroCuadrado()">Calcular Perimetro</button>
+                    <button type="button" class="main_container_form-area" onclick="calcularAreaCuadrado()">Calcular Area</button>
                 </div>
             </form>
             <!-- Triangulo -->
@@ -89,8 +92,8 @@
                     </div>
                 </div>
                 <div class="formShape_buttons">
-                    <button class="main_container_form-perimetro">Calcular Perimetro</button>
-                    <button class="main_container_form-area">Calcular Area</button>
+                    <button type="button" onclick="calcularPerimetroTriangulo()" class="main_container_form-perimetro">Calcular Perimetro</button>
+                    <button type="button" onclick="calcularAreaTriangulo()" class="main_container_form-area">Calcular Area</button>
                 </div>
             </form>
             <!-- Circulo -->
@@ -98,11 +101,11 @@
                 <h2><i class="fad fa-circle"></i>Circulo</h2>
                 <div class="main_container_formSquare_lados">
                     <label for="ladosCuadrado">Ingresa cuanto mide el radio:</label>
-                    <input type="number" id="ladosCuadrado">
+                    <input type="number" id="radio">
                 </div>
                 <div class="formShape_buttons">
-                    <button class="main_container_form-perimetro">Calcular Perimetro</button>
-                    <button class="main_container_form-area">Calcular Area</button>
+                    <button type="button" onclick="calcularPerimetroCirculo()" class="main_container_form-perimetro">Calcular Perimetro</button>
+                    <button type="button" onclick="calcularAreaCirculo()" class="main_container_form-area">Calcular Area</button>
                 </div>
             </form>
         </section>
@@ -117,5 +120,8 @@
     </footer>
 </body>
 <script src="./js/jquery-3.6.0.min.js"></script>
-<script src="./js/index/index.js"></script>
+<!-- JQueryConfirm -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+<!-- Mis Querys -->
+<script src="./js/figuras.js"></script>
 </html>

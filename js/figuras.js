@@ -1,3 +1,74 @@
+// Validando el scroll para ocultar footer
+var ultimoScroll = 0 ;
+const cero = 0;
+var body = document.querySelector('.body')
+var width = window.innerWidth
+
+var ubicacionPrincipal = window.pageYOffset;
+window.onscroll = function() {
+    let desplazamiento = window.pageYOffset;
+    if (ubicacionPrincipal < desplazamiento) {
+        let width = window.innerWidth 
+        if (width < 1024) {
+            body.classList.add('scroll');
+        }
+    } else {
+        body.classList.remove('scroll');
+    }
+    ubicacionPrincipal = desplazamiento;
+}
+
+// Captuarndo los botones para seleccionar la figura
+var squareButton = document.querySelector(".square");
+var triangleButton = document.querySelector(".triangle");
+var circleButton = document.querySelector(".circle");
+var fomrs = document.querySelectorAll('.formShape');
+
+// Boton de Cuadrado
+squareButton.addEventListener('click', () =>  {
+    fomrs.forEach(form => {
+        if (form.classList.contains('main_container_formSquare')) {
+            form.classList.add('visible');
+            squareButton.classList.add('selected');
+            console.log(squareButton.classList)
+        } else {
+            form.classList.remove('visible');
+            squareButton.classList.remove('selected');
+        }
+    });
+    circleButton.classList.remove('selected')
+    squareButton.classList.add('selected')
+    triangleButton.classList.remove('selected')
+})
+
+// Botton de Triangulo
+triangleButton.addEventListener('click', () =>  {
+    fomrs.forEach(form => {
+        if (form.classList.contains('main_container_formTriangle')) {
+            form.classList.add('visible');
+            triangleButton.classList.add('selected');
+        } else {
+            form.classList.remove('visible');
+            triangleButton.classList.remove('selected');
+        }
+    });
+    circleButton.classList.remove('selected')
+    squareButton.classList.remove('selected')
+    triangleButton.classList.add('selected')
+})
+circleButton.addEventListener('click', () =>  {
+    fomrs.forEach(form => {
+        if (form.classList.contains('main_container_formCircle')) {
+            form.classList.add('visible');
+        } else {
+            form.classList.remove('visible');
+        }
+    });
+    circleButton.classList.add('selected')
+    squareButton.classList.remove('selected')
+    triangleButton.classList.remove('selected')
+})
+
 /* -----------------------------------
                 CUADRADO
 ----------------------------------- */
@@ -11,7 +82,7 @@ function areaCuadrado(lado) {
 
 // Interactuando con el HTML
 function calcularPerimetroCuadrado(){
-    let lado = document.getElementById("inputCuadrado").value;
+    let lado = document.getElementById("ladosCuadrado").value;
     let result = perimetroCuadrado(lado)
     $.alert({
         icon: "fad fa-square-full",
@@ -24,7 +95,7 @@ function calcularPerimetroCuadrado(){
     });
 }
 function calcularAreaCuadrado(){
-    let lado = document.getElementById("inputCuadrado").value;
+    let lado = document.getElementById("ladosCuadrado").value;
     $.alert({
         icon: "fad fa-square-full",
         title: 'Area del Cuadrado',
@@ -44,7 +115,9 @@ function calcularAreaCuadrado(){
 function perimetroTriangulo(l1, l2, base) {
     return l1 + l2 + base;
 }
-function isIsosceles(l1, l2, base) {
+
+// Funcion que validad si es un triangulo isosceles
+function isIsosceles(l1, l2) {
     if (l1 !== l2) {
         return false
     } else {
@@ -64,9 +137,9 @@ function areaTriangulo(base, altura) {
 }
 // Interactuando con el HTML
 function calcularPerimetroTriangulo() {
-    let lado1 = parseFloat(document.getElementById("inputLadoUno").value);
-    let lado2 = parseFloat(document.getElementById("inputLadoDos").value);
-    let base = parseFloat(document.getElementById("inputLadoTres").value);
+    let lado1 = parseFloat(document.getElementById("ladoUno").value);
+    let lado2 = parseFloat(document.getElementById("ladoDos").value);
+    let base = parseFloat(document.getElementById("base").value);
     $.alert({
         icon: "fad fa-triangle",
         title: 'Area del Triangulo',
@@ -78,10 +151,9 @@ function calcularPerimetroTriangulo() {
     });
 }
 function calcularAreaTriangulo() {
-    let lado1 = parseFloat(document.getElementById("inputLadoUno").value);
-    let lado2 = parseFloat(document.getElementById("inputLadoDos").value);
-    let lado3 = parseFloat(document.getElementById("inputLadoTres").value);
-    console.log(isIsosceles(lado1, lado2, lado3))
+    let lado1 = parseFloat(document.getElementById("ladoUno").value);
+    let lado2 = parseFloat(document.getElementById("ladoDos").value);
+    let lado3 = parseFloat(document.getElementById("base").value);
     if (isIsosceles(lado1, lado2, lado3)===true) {
         let altura = alturaTriangulo(lado1, lado3) 
         $.alert({
@@ -156,7 +228,7 @@ function areaCirculo(radio) {
 }
 
 function calcularPerimetroCirculo() {
-    let radio = parseFloat(document.getElementById("inputRadioCirculo").value);
+    let radio = parseFloat(document.getElementById("radio").value);
     let perimetro = perimetroCirculo(radio);
 
     $.alert({
@@ -173,7 +245,7 @@ function calcularPerimetroCirculo() {
 }
 
 function calcularAreaCirculo() {
-    let radio = parseFloat(document.getElementById("inputRadioCirculo").value);
+    let radio = parseFloat(document.getElementById("radio").value);
     let area = areaCirculo(radio);
 
     $.alert({
