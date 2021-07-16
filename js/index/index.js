@@ -16,35 +16,3 @@ window.onscroll = function() {
     }
     ubicacionPrincipal = desplazamiento;
 }
-
-var squareButton = document.querySelector(".square");
-var triangleButton = document.querySelector(".triangle");
-var circleButton = document.querySelector(".circle");
-var fomrs = document.querySelectorAll('.formShape');
-squareButton.addEventListener('click', () =>  {
-    fomrs.forEach(form => {
-        if (form.classList.contains('main_container_formSquare')) {
-            form.classList.add('visible');
-        } else {
-            form.classList.remove('visible');
-        }
-    });
-})
-triangleButton.addEventListener('click', () =>  {
-    fomrs.forEach(form => {
-        if (form.classList.contains('main_container_formTriangle')) {
-            form.classList.add('visible');
-        } else {
-            form.classList.remove('visible');
-        }
-    });
-})
-circleButton.addEventListener('click', () =>  {
-    fomrs.forEach(form => {
-        if (form.classList.contains('main_container_formCircle')) {
-            form.classList.add('visible');
-        } else {
-            form.classList.remove('visible');
-        }
-    });
-})

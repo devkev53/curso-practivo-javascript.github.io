@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras Geometricas | Curso practico de JS</title>
+    <!-- Title Icon -->
+    <link rel="shortcut icon" href="./assets/kp_black.ico" />
+    <!-- Font Awesome -->
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet">
+    <!-- Mi CSS -->
+    <link rel="stylesheet" href="./css/index/styles.css">
+    <link rel="stylesheet" href="./css/index/styles768.css">
+    <!-- Figuras CSS -->
+    <link rel="stylesheet" href="./css/figuras.css">
+</head>
+<body class="index body">
+    <header class="header">
+        <!-- Navbar -->
+        <nav class="header_navbar">
+            <a href="./index.html" class="header_navbar_logo">
+                <picture>
+                    <img src="./assets/kp_white.png" alt="">
+                    <h2>KodePrint</h2>
+                </picture>
+            </a>
+            <ul class="header_navbar_list">
+                <a href="./figuras.html" class="header_navbar_list_link">
+                    <li class="header_navbar_list_link-element">
+                        <i class="fad fa-shapes"></i><span>Taller #1</span>
+                    </li>
+                </a>
+                <a href="./descuentos.html" class="header_navbar_list_link">
+                    <li class="header_navbar_list_link-element">
+                        <i class="fad fa-percent"></i><span>Taller #2</span>
+                    </li>
+                </a>
+                <a href="" class="header_navbar_list_link">
+                    <li class="header_navbar_list_link-element">
+                        <i>?</i> <span>Taller #3</span>
+                    </li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <!-- SECCION PRINCIPAL MAIN -->
+    <main class="main">
+        <div class="main_container">
+            <section class="main_case">
+                <picture class="main_case_title">
+                    <img src="./assets/shapes.svg" alt="">
+                    <h1>Figuras Geometricass</h1>
+                </picture>
+                <span>Calcula el Perimetro y Area..!</span>
+                <div class="">
+                    <button class="circle main_case_selectShapes_btnShpae selected">
+                        <i class="fas fa-circle"></i>
+                    </button>
+                    <button class="square main_case_selectShapes_btnShpae">
+                        <i class="fas fa-square"></i>
+                    </button>
+                    <button class="triangle main_case_selectShapes_btnShpae">
+                        <i class="fas fa-triangle"></i>
+                    </button>
+                </div>
+            </section>
+            <section class="main_shapes">
+                <!-- Circulo -->
+                <form action="" class="circle main_shapes_circle hiden main_shapes_form">
+                    <h2 class="main_shapes_circle-ShapeTitle main_shapes_form-title"><i class="fad fa-circle"></i>Circulo</h2>
+                    <div class="main_shapes_circle_medidas">
+                        <label for="inputRadio">Ingresa el valor del Radio:</label>
+                        <input class="main_shapes_form-input" type="number" id="inputRadio">
+                    </div>
+                    <div class="main_shapes_circle_buttons main_shapes_form_buttons">
+                        <button type="button" class="main_shapes_circle_buttons-perimetro perimetro">Perimetro</button>
+                        <button type="button" class="main_shapes_circle_buttons-area area">Area</button>
+                    </div>
+                </form>
+                <!-- Cuadrado -->
+                <form action="" class="square main_shapes_square hiden main_shapes_form">
+                    <h2 class="main_shapes_form-title"><i class="fad fa-square"></i>Cuadrado</h2>
+                    <div class="main_shapes_square_medidas">
+                        <label for="inputRadio">Ingresa el valor del Radio:</label>
+                        <input class="main_shapes_form-input" type="number" id="inputLados">
+                    </div>
+                    <div class="main_shapes_square_buttons main_shapes_form_buttons">
+                        <button type="button" class="main_shapes_square_buttons-perimetro perimetro">Perimetro</button>
+                        <button type="button" class="main_shapes_square_buttons-area area">Area</button>
+                    </div>
+                </form>
+                <!-- Triangulo -->
+                <form action="" class="triangle main_shapes_triangle hiden main_shapes_form">
+                    <h2 class="main_shapes_form-title"><i class="fad fa-triangle"></i>Triangulo</h2>
+                    <span>Ingrese los datos del triangulo:</span>
+                    <div class="main_shapes_square_medidas">
+                        <label for="inputRadio">Lado a):</label>
+                        <input class="main_shapes_form-input" type="number" id="inputLadoA">
+                        <label for="inputRadio">Lado c):</label>
+                        <input class="main_shapes_form-input" type="number" id="inputLadoC">
+                        <label for="inputRadio">Base:</label>
+                        <input class="main_shapes_form-input" type="number" id="inputBase">
+                    </div>
+                    <div class="main_shapes_square_buttons main_shapes_form_buttons">
+                        <button type="button" class="main_shapes_square_buttons-perimetro perimetro">Perimetro</button>
+                        <button type="button" class="main_shapes_square_buttons-area area">Area</button>
+                    </div>
+                </form>
+                <p class="resultado"></p>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <ul class="footer_container">
+            <a href="https://www.linkedin.com/in/kevin-alberto-palma-ralda-319968187/" target="blank" class="footer_container_link"><li class="footer_container_link-element"><i class="fab fa-linkedin"></i></li></a>
+            <a href="https://github.com/kapr53" class="footer_container_link" target="blank"><li class="footer_container_link-element"><i class="fab fa-github-square"></i></li></a>
+            <a href="https://www.youtube.com/channel/UCOpeOsGznEZhwUsDu6-srBw/featured" class="footer_container_link" target="blank"><li class="footer_container_link-element"><i class="fab fa-youtube-square"></i></li></a>
+        </ul>
+        <div class="footer_info">KodePrint &copy; 2021 | Kevin Palma</div>
+    </footer>
+</body>
+<script src="./js/index/index.js"></script>
+<script src="./js/figuras.js"></script>
+</html>

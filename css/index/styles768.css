@@ -62,6 +62,18 @@ body {
         display: flex;
         margin-left: 1rem;
     }
+    .header_navbar_logo img, .header_navbar_logo h2 {
+        transition: .3s all ease;
+    }
+    .header_navbar_logo:hover img {
+        transform: rotate(-25deg);
+        filter: blur(.075rem);
+    }
+    .header_navbar_logo:hover h2 {
+        color: var(--color_4);
+        filter: blur(.075rem);
+        transform: scale(115%);
+    }
 
     /* Estilos de la lista */
     .header_navbar_list {
@@ -98,11 +110,67 @@ body {
     * - * - * PANTALLAS DE 1280px * - * - *
 ----------------------------------------------- */
 @media (min-width: 1280px) {
+    .body {
+        justify-content: start;
+    }
     /* -----------------------------------------------
                 * - * - * HEADER * - * - *
     ----------------------------------------------- */
+    .header {
+        height: 100vh;
+        width: 25rem;
+        position: fixed;
+    }
+    .header_navbar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .header_navbar_logo {
+        position: relative;
+        justify-content: start;
+        width: 100%;
+        height: 8rem;
+        padding: 1.5rem 2.5rem;
+    }
+    .header_navbar_logo img, .header_navbar_logo h2 {
+        transition: .3s all ease;
+    }
+    .header_navbar_logo:hover img {
+        transform: rotate(-25deg);
+        filter: blur(.075rem);
+    }
+    .header_navbar_logo:hover h2 {
+        color: var(--color_4);
+        filter: blur(.075rem);
+        transform: scale(115%);
+    }
     .header_navbar_list {
-        width: 35%;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        min-width: 100%;
+        margin-top: .2rem;
+    }
+    .header_navbar_list_link {
+        display: flex;
+        width: 100%;
+        padding: 1.5rem 2.5rem;
+    }
+    ..header_navbar_list_link-element {
+        width: 100%;
+    }
+    .header_navbar_list_link:hover {
+        transform: none;
+        background-color: var(--bg_color3);
+    }
+    /* -----------------------------------------------
+                * - * - * MAIN * - * - *
+    ----------------------------------------------- */
+    .main {
+        margin-left: 25rem;
     }
      /* -----------------------------------------------
                 * - * - * FOOTER * - * - *
