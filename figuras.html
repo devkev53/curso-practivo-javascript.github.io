@@ -58,41 +58,52 @@
             </div>
         </section>
         <section class="main_container">
+            <!-- Cuadrado -->
             <form action="" class="main_container_formSquare formShape">
                 <h2><i class="fad fa-square-full"></i>Cuadrado</h2>
                 <div class="main_container_formSquare_lados">
                     <label for="ladosCuadrado">Ingresa cuanto mide cada lado:</label>
                     <input type="number" id="ladosCuadrado">
                 </div>
-                <button class="main_container_form-perimetro">Calcular Perimetro</button>
-                <button class="main_container_form-area">Calcular Area</button>
+                <div class="formShape_buttons">
+                    <button class="main_container_form-perimetro">Calcular Perimetro</button>
+                    <button class="main_container_form-area">Calcular Area</button>
+                </div>
             </form>
+            <!-- Triangulo -->
             <form action="" class="main_container_formTriangle formShape">
                 <h2><i class="fad fa-triangle"></i>Triangulo</h2>
                 <span>Ingresa cada uno de los lados del triangulo</span>
-                <div class="main_container_formTriangle_ladoUno">
-                    <label for="ladoUno">Lado Uno:</label>
-                    <input type="number" id="ladoUno">
+                <div class="main_container_formTriangle_lados">
+                    <div class="main_container_formTriangle_ladoUno">
+                        <label for="ladoUno">a):</label>
+                        <input type="number" id="ladoUno">
+                    </div>
+                    <div class="main_container_formTriangle_ladoDos">
+                        <label for="ladoDos">c):</label>
+                        <input type="number" id="ladoDos">
+                    </div>
+                    <div class="main_container_formTriangle_base">
+                        <label for="base">Base):</label>
+                        <input type="number" id="base">
+                    </div>
                 </div>
-                <div class="main_container_formTriangle_ladoDos">
-                    <label for="ladoDos">Lado Dos:</label>
-                    <input type="number" id="ladoDos">
+                <div class="formShape_buttons">
+                    <button class="main_container_form-perimetro">Calcular Perimetro</button>
+                    <button class="main_container_form-area">Calcular Area</button>
                 </div>
-                <div class="main_container_formTriangle_base">
-                    <label for="base">Base:</label>
-                    <input type="number" id="base">
-                </div>
-                <button class="main_container_form-perimetro">Calcular Perimetro</button>
-                <button class="main_container_form-area">Calcular Area</button>
             </form>
+            <!-- Circulo -->
             <form action="" class="main_container_formCircle formShape">
                 <h2><i class="fad fa-circle"></i>Circulo</h2>
                 <div class="main_container_formSquare_lados">
                     <label for="ladosCuadrado">Ingresa cuanto mide el radio:</label>
                     <input type="number" id="ladosCuadrado">
                 </div>
-                <button class="main_container_form-perimetro">Calcular Perimetro</button>
-                <button class="main_container_form-area">Calcular Area</button>
+                <div class="formShape_buttons">
+                    <button class="main_container_form-perimetro">Calcular Perimetro</button>
+                    <button class="main_container_form-area">Calcular Area</button>
+                </div>
             </form>
         </section>
     </main>
