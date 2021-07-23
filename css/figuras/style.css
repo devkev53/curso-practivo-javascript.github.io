@@ -1,0 +1,261 @@
+:root {
+    --color1: #5E412F;
+    --color2: #F07818;
+    --color3: #F0A830;
+    --color4: #FCEBB6;
+    --softColor2: #f19950; 
+    --softColor3: #d1a558;
+    /* Fuentes */
+    --chelsea: 'Chelsea Market', cursive;
+    --gaby: 'Gabriela', serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    background: linear-gradient(to right, #43c6ac, #f8ffae);
+}
+main {
+    width: 100%;
+    height: calc(100vh - 13rem);
+    display: flex;
+    margin: 5rem 0 6rem 0;
+    flex-direction: column;
+    justify-content: center;
+}
+.main_shapesContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    min-height: 80vh;
+}
+.main_shapesContainer-title, .main_shapesContainer-containerButtons {
+    width: 90%;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+/* Title */
+.main_shapesContainer-title {
+    font-size: 1.4rem;
+    font-family: var(--gaby);
+}
+.main_shapesContainer-title img {
+    width: 20%;
+    min-width: 4rem;
+    max-width: 6rem;
+}
+.main_shapesContainer-title h1 {
+    font-size: 2.4rem;
+    font-family: var(--chelsea);
+    margin-bottom: .5rem;
+    font-weight: bold;
+    color: var(--color2);
+    text-shadow: 0 .4rem .8rem rgba(255, 255, 255, 0.5);
+}
+/* Shape Select */
+.main_shapesContainer-containerButtons {
+    width: 100%;
+}
+.main_shapesContainer-containerButtons p {
+    font-size: 1.4rem;
+    font-family: var(--gaby);
+    margin-bottom: .5rem;
+    color: var(--color1);
+    font-weight: 600;
+}
+.main_shapesContainer-containerButtons .buttons {
+    width: 35%;
+    min-width: 15rem;
+    max-width: 30rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: .5rem;
+}
+.main_shapesContainer-containerButtons .buttons a {
+    font-size: 2.4rem;
+    padding: .8rem;
+    border: none;
+    border-radius: .8rem;
+    background: var(--color4);
+    color: var(--color2);
+    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.8);
+}
+.main_shapesContainer-containerButtons .buttons .selected {
+    color: var(--color1);
+    background-color: var(--softColor3);
+}
+/* Slider */
+.main_shapesContainer-Slide {
+    position: relative;
+    display: flex;
+    height: auto;
+    overflow-x: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    overflow-y: hidden;
+}
+.btnSlider {
+    position: absolute;
+    font-weight: bold;
+    font-size: 4rem;
+    width: 5rem;
+    height: 5rem;
+    top: calc(50% - 3rem);
+    right: .5rem ;
+    z-index: 3;
+    color: var(--softColor3);
+    filter: blur(.1rem);
+    background: rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    border: none;
+    transition: .3s all ease;
+}
+.btnSlider:hover {
+    filter: blur(0);
+    color: var(--color1);
+    background: rgba(0, 0, 0, .3);
+}
+.btnSlider.left {
+    left: .5rem ;
+    transform: rotate(180deg);
+}
+/* FormCOntainer threShapes */
+.formShape_container {
+    scroll-behavior: smooth;
+    scroll-snap-align: center;
+    min-width: 80%;
+    max-width: 50rem;
+    min-height: 25vh;
+    max-height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 2rem;
+    margin: 1rem 10%;
+    border-radius: .8rem;
+    background: rgba(0, 0, 0, .1);
+    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.8);
+}
+.formShape_container h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    color: var(--color3);
+    font-family: var(--chelsea);
+    text-shadow: 0 .2rem .2rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+.formShape_container h2 i {
+    margin-right: 1rem;
+    animation-name: focusShape;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.formShape_container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    font-family: var(--gaby);
+}
+/* Estilo de los input del tirangle */
+.formShape_container form .lados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.formShape_container form .lados .ladosInput {
+    display: flex;
+    align-items: center;
+    width: 45%;
+}
+.formShape_container form .lados .base {
+    width: 100%;
+}
+
+.formShape_container form .lados .ladosInput input {
+    width: 100%;
+}
+
+.formShape_container form .lados label {
+    margin-right: .5rem;
+}
+.formShape_container form input {
+    border-radius: .4rem;
+    border: none;
+    padding: .5rem;
+    margin: .5rem 0;
+    outline: none;
+}
+.formShape_container .buttonsContainer {
+    display: flex;
+    width: 100%;
+    margin: 1rem auto;
+    justify-content: space-between;
+}
+.formShape_container .buttonsContainer button {
+    width: 45%;
+    font-family: var(--chelsea);
+    padding: .5rem;
+    font-weight: bold;
+    border-radius: .8rem;
+    border: none;
+    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.8);
+    transition: .3s all ease;
+}
+.formShape_container .buttonsContainer .area {
+    color: var(--color1);
+    background-color: var(--color4);
+}
+.formShape_container .buttonsContainer .perimetro {
+    color: var(--color2);
+    background-color: #f2f2f2;
+}
+.formShape_container .buttonsContainer .area:hover {
+    color: #fff;
+    background-color: var(--color1);
+}
+.formShape_container .buttonsContainer .perimetro:hover {
+    color: #f2f2f2;
+    background-color: var(--color2);
+}
+
+/* ------------- Dando estilos a Jquery Confirm ---------- */
+.jconfirm-title-c {
+    font-size: 2.4rem;
+    font-family: var(--chelsea);
+}
+.jconfirm-content {
+    font-size: 1.8rem;
+    font-family: var(--gaby);
+}
+.jconfirm-buttons {
+    font-size: 1.8rem;
+    font-family: var(--chelsea);
+}
+@keyframes focusShape {
+    50% {
+        transform: scale(125%);
+        color: var(--color2);
+    }
+}
+@media (min-width: 768px) {
+    .main_shapesContainer-Slide {
+        height: 45vh;
+    }
+    .formShape_container {
+        min-width: 30%;
+        max-height: 5vh;
+        transform: scale(175%);
+        margin: auto 45%;
+    }
+}
