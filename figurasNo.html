@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras Geómetricas | KodePrint</title>
+    <!-- Font Awesome -->
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet">
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Gabriela&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <!-- Navbar y Footer -->
+    <link rel="stylesheet" href="./css/index/index.css">
+    <!-- Estilos de figuras -->
+    <link rel="stylesheet" href="./css/figuras/style.css">
+    <link rel="stylesheet" href="./css/figuras/portatil.css" media="(min-width: 1026px)">
+    <!-- JQueryConfirm -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="" class="navbar_logoLink">
+                <img src="./assets/kp_white.png" class="navbar_logoLink-img" alt="KodePrint">
+                <p>KodePrint</p>
+            </a>
+            <ul class="navbar_list">
+                <a href="" class="navbar_list_link">
+                    <li class="navbar_list_link-element"><i class="far fa-shapes"></i><p>Figuras</p></li>
+                </a>
+                <a href="" class="navbar_list_link">
+                    <li class="navbar_list_link-element"><i class="far fa-percent"></i><p>Porcentajes</p></li>
+                </a>
+                <a href="" class="navbar_list_link">
+                    <li class="navbar_list_link-element"><i class="far fa-question"></i><p>Algo</p></li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main_shapesContainer">
+            <!-- Titulo -->
+            <div class="main_shapesContainer-title">
+                <img src="./assets/shapes.svg" alt="Figuras Geómetricas">
+                <h1>Figuras Geómetricas.</h1>
+                <p>Calcula el area y perimetro..!</p>
+            </div>
+            <!-- Botones de las figuras -->
+            <div class="main_shapesContainer-containerButtons">
+                <p>Selecciona la figura a calcular.</p>
+                <div class="buttons">
+                    <a href="#formCuadro" class="btnCuadrado selected" aria-label="Square">
+                        <i class="fad fa-square-full"></i>
+                    </a>
+                    <a href="#formTriangulo" class="btnTriangulo" aria-label="triangle">
+                        <i class="fad fa-triangle"></i>
+                    </a>
+                    <a href="#formCirculo" class="btnCirculo" aria-label="Circle">
+                        <i class="fad fa-circle"></i>    
+                    </a>
+                </div>
+            </div>
+            <!-- Slider de las Figuras -->
+            <div class="main_shapesContainer-Slide">
+                <!-- <button class="btnSlider right">></button>
+                <button class="btnSlider left">></button> -->
+                <!-- Cuadrado -->
+                <div id="formCuadro" class="formShape_container">
+                    <h2><i class="fad fa-square-full"></i>Cuadrado</h2>
+                    <p>Ingresa los datos de tu figura.</p>
+                    <form action="">
+                        <label for="inputCuadrado">Cuanto mide tu Cuadrado:</label>
+                        <input id="inputCuadrado" required type="number" autocomplete="off" placeholder="Ingresa solo numeros..!">
+                        <div class="buttonsContainer">
+                            <button class="area" id="" onclick="calcularAreaCuadrado()">Area</button>
+                            <button class="perimetro" id="" onclick="calcularPerimetroCuadrado()">Perimetro</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Triangulo -->
+                <div id="formTriangulo" class="formShape_container">
+                    <h2><i class="fad fa-triangle"></i>Triangulo</h2>
+                    <p>Ingresa los datos de tu figura.</p>
+                    <form action="">
+                        <div class="lados">
+                            <div class="ladoA ladosInput">
+                                <label for="inputLadoA">a):</label>
+                                <input id="inputLadoA" type="number" placeholder="Numeros..!">
+                            </div>
+                            <div class="ladoB ladosInput">
+                                <label for="inputLadoC">c):</label>
+                                <input id="inputLadoC" type="number" placeholder="Numeros..!">
+                            </div>
+                            <div class="base ladosInput">
+                                <label for="inputBase">base):</label>
+                                <input id="inputBase" type="number" placeholder="Ingresa solo numeros..!">
+                            </div>
+                        </div>
+                        <div class="buttonsContainer">
+                            <button class="area" id="" onclick="">Area</button>
+                            <button class="perimetro" id="" onclick="">Perimetro</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Circulo -->
+                <div id="formCirculo" class="formShape_container">
+                    <h2><i class="fad fa-circle"></i>Circulo</h2>
+                    <p>Ingresa los datos de tu figura.</p>
+                    <form action="">
+                        <label for="inputRadio">Cuanto midel el Radio: </label>
+                        <input id="inputRadio" required type="number" placeholder="Ingresa solo numeros..!">
+                        <div class="buttonsContainer">
+                            <button class="area" id="" onclick="">Area</button>
+                            <button class="perimetro" id="" onclick="calcularPerimetroCirculo()">Perimetro</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="./js/figuras.js"></script>
+    
+</body>
+</html>

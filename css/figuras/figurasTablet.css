@@ -1,0 +1,22 @@
+main {
+    margin: 8rem auto 6rem auto;
+    max-width: 80%;
+}
+.shapesContainer_titleContainer h1 {
+    font-size: 3.4rem;
+}
+
+/* Contenedor de los formularios o Slide */
+.shapesContainer_boxForms {
+    min-width: 102.4rem;
+    max-width: 128rem;
+    margin: 1.5rem auto;
+    overflow-x: unset;
+}
+.shapesContainer_boxForms .shapeForm {
+    min-height: 20rem;
+    max-height: 40%;
+    min-width: 28%;
+    max-width: 31%;
+    margin:1rem auto;
+}

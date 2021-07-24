@@ -1,4 +1,10 @@
 :root {
+    --color_1: #f1e3cc;
+    --color_3: #ff4e62;
+    --color_4: #ffb338;
+    --bg_color: #0e242f;
+    --bg_color2: #181717;
+    --bg_color3: #343d5b;
     /* Fuentes */
     --chelsea: 'Chelsea Market', cursive;
     --gaby: 'Gabriela', serif;
@@ -17,7 +23,7 @@ header {
     align-items: center;
     padding: .5rem 8%;
     color: #f2f2f2;
-    background: #000;
+    background: var(--bg_color);
 }
 .navbar .navbar_logoLink {
     width: 7rem;
@@ -31,6 +37,7 @@ header {
 }
 .navbar .navbar_logoLink p {
     display: none;
+    transition: .3s all ease;
 }
 .navbar .navbar_logoLink .navbar_logoLink-img {
     width: 4.5rem;
@@ -39,7 +46,10 @@ header {
     transition: .3s all ease;
 }
 .navbar .navbar_logoLink:hover .navbar_logoLink-img {
-    transform: rotate(-45deg);
+    transform: rotate(-25deg);
+}
+.navbar .navbar_logoLink:hover p {
+    transform: scale(110%);
 }
 .navbar_list {
     display: flex;
@@ -71,10 +81,51 @@ header {
 /* footer */
 footer {   
     width: 100%;
-    background: #000;
-    height: 5rem;
+    display: flex;
+    align-items: center;
     position: fixed;
+    padding: 1rem 8%;
     top: 0;
+    background: var(--bg_color2);
+    color: #f2f2f2;
+    font-size: 1.6rem;
+}
+.footer_conatinerLinks, .footer_conatinerInfo {
+    display: flex;
+    width: auto;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+}
+.footer_conatinerLinks {
+    position: absolute;
+    right: 0;
+    width: 40%;
+    padding-right: 8%;
+}
+.footer_conatinerLinks a {
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.footer_conatinerLinks .Linkedin {
+    color: #0e76a8;
+}
+.footer_conatinerLinks .Youtube {
+    color: #c4302b;
+}
+.footer_conatinerLinks .Github {
+    color: purple;
+}
+.footer_conatinerLinks a span {
+    display: none;
+    color: #f2f2f2;
+}
+.footer_conatinerLinks a:hover i {
+    transform: scale(150%);
+    transition: .3s all ease;
 }
 
 @media (min-width: 1024px) {
@@ -92,16 +143,22 @@ footer {
         width: auto;
     }
     .navbar_list .navbar_list_link {
-        width: 15rem;
+        width: 20rem;
         font-size: 1.6rem;
     }
     .navbar_list .navbar_list_link:hover {
         transform: rotate(0deg);
-        background-color: yellowgreen;
+        background: var(--color_4);
+        color: var(--bg_color2);
+        /* transform: scale(110%); */
     }
     .navbar_list .navbar_list_link .navbar_list_link-element p {
         display: unset;
-        margin-left: .5rem;
+        margin-left: 1rem;
+        transition: .3s all ease;
+    }
+    .navbar_list .navbar_list_link:hover .navbar_list_link-element p {
+        font-size: 2rem;
     }
     .navbar_list .navbar_list_link .navbar_list_link-element i {
         font-size: 2rem;
@@ -111,5 +168,29 @@ footer {
     footer {
         top: unset;
         bottom: 0;
+        padding: 0 8%;
+        font-size: 1.8rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer_conatinerInfo {
+        width: 100%;
+        order: 2;
+    }
+    .footer_conatinerLinks {
+        width: 30%;
+        justify-content: space-around;
+        position: relative;
+        padding-right: 0;
+    }
+    .footer_conatinerLinks a span {
+        display: unset;
+        margin: 1rem;
+        margin-left: .5rem;
+        margin-right: 2rem;
+    }
+    .footer_conatinerLinks a:hover span {
+        color: var(--color_4);
+        transition: .3s all ease;
     }
 }
