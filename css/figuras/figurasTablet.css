@@ -1,5 +1,5 @@
 main {
-    margin: 8rem auto 6rem auto;
+    margin: 6.5rem auto 5rem auto;
     max-width: 80%;
 }
 .shapesContainer_titleContainer h1 {
@@ -10,7 +10,8 @@ main {
 .shapesContainer_boxForms {
     min-width: 102.4rem;
     max-width: 128rem;
-    margin: 1.5rem auto;
+    margin: .5rem auto;
+    align-self: center;
     overflow-x: unset;
 }
 .shapesContainer_boxForms .shapeForm {
