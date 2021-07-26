@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    background: #000;
+    background-image: url('../../assets/numbers.jpg');
+    background-size: 100%;
+}
+main {
+    margin: 6rem 0 7rem 0;
+}
