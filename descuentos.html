@@ -50,14 +50,31 @@
             <form class="formCalcular" action="">
                 <h2><i class="far fa-tags"></i>Clacula el Precio..!</h2>
                 <span>Ingresa un precio con porcentaje de descuento y calcula el precio a pagar..!</span>
+                <div class="descuentoForm_cupon">
+                    <label>Tienes un Cupon:</label>
+                    <button id="cuponBtn" type="button"><span></span></button>
+                </div>
                 <div class="descuentoForm_input">
                     <input type="number" id="inputPrice" onkeypress="" required min="0" step="0.01">
                     <label><span>Precio:</span></label>
                 </div>
-                <div class="descuentoForm_input">
+                <div class="descuentoForm_input porcentContainer">
                     <input type="number" class="porcent" onkeyup="return valNum(event)" id="inputPorcent" required max="99" min="0" step="0.01">
                     <label><span>Descuento / No mayor a 100:</span></label>
                 </div>
+                <div class="descuentoForm_input cuponContainer">
+                    <input type="text" class="cupon" onkeyup="return valNum(event)" id="inputCupon" required>
+                    <label><span>Ingresa el codigo del cupon:</span></label>
+                </div>
+                <!-- <div class="descuentoForm_select">
+                    <label>Tienes un Cupon.?</label>
+                    <select name="cupon" id="inputCupon">
+                        <option value="0">No</option>
+                        <option value="15">15%</option>
+                        <option value="25">25%</option>
+                        <option value="30">30%</option>
+                    </select>                
+                </div> -->
                 <button type="button" class="btnCalcular" onclick="calcularDescuento()">
                     <span id="span1"></span>
                     <span id="span2"></span>
