@@ -22,16 +22,23 @@ body {
     background-size: 100%;
 }
 main {
-    margin: 4rem 0 6rem 0;
     font-family: var(--chelsea);
     width: 100%;
 }
-
+section {
+    width: 100%;
+    margin: 0 auto;
+    background-image: linear-gradient(to bottom, #000, transparent);
+    
+}
 .titleContainer {
     display: flex;
+    padding-top: 6rem;
     justify-content: center;
     flex-wrap: wrap;
     color: var(--color_2);
+    text-shadow: 0 0 .1rem #000, 0 0 .5rem var(--color_2);
+    margin-bottom: 2rem;
 }
 .titleContainer h1 {
     font-size: 2.4rem;
@@ -42,11 +49,200 @@ main {
     width: 100%;
     margin-top: 1rem;
     text-align: center;
+    color: #fff;
 }
 .titleContainer img {
-    width: 15%;
+    width: 10%;
     display: inline-block;
     max-width: 10rem;
     text-align: center;
     margin:0 auto ;
 }
+
+.formCalcular {
+    min-width: 27rem;
+    width: 75%;
+    max-width: 40rem;
+    min-height: 25rem;
+    max-height: 50rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: .8rem;
+    padding: 1.5rem;
+    color: #f2f2f2;
+    background-color: rgba(219, 58, 0, 0.87);
+    box-shadow: .2rem .2rem .5rem var(--color_1),
+    .5rem .5rem .5rem #000,
+    0 .5rem .8rem var(--color_2) ;
+}
+.formCalcular h2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.formCalcular h2 i {
+    margin-right: .5rem;
+    font-size: 3rem;
+}
+.formCalcular span {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.formCalcular .descuentoForm_input {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    font-family: var(--chelsea);
+    transform: all .3s ease;
+}
+.formCalcular .descuentoForm_input input {
+    width: 100%;
+    padding: .5rem 1rem;
+    margin-bottom: .2rem;
+    border: none;
+    position: relative;
+    background: transparent;
+    color: #f2f2f2;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: .4rem;
+    outline: none;
+}
+.formCalcular .descuentoForm_input label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: .2rem solid #f2f2f2;
+    border-radius: .4rem;
+    transition: all .3s ease;
+}
+.formCalcular .descuentoForm_input label::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -.2rem;
+    width: 0;
+    height: 100%;    border-bottom: .4rem solid slateblue;
+    border-radius: .4rem;
+    transition: all .3s ease;
+}
+
+.formCalcular .descuentoForm_input label span {
+    position: absolute;
+    text-align: unset;
+    left: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: .1rem;
+    transition: all .3s ease;
+}
+.formCalcular .descuentoForm_input input:focus + label span,
+.formCalcular .descuentoForm_input input:valid + label span {
+    transform: translateY(-75%);
+    font-size: 1rem;
+    color: slateblue;
+    text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 0.8);
+    margin-bottom: .5rem;
+}
+.formCalcular .descuentoForm_input input:focus + label::after,
+.formCalcular .descuentoForm_input input:valid + label::after {
+    /* transform: translateX(0%); */
+    width: 100%;
+}
+
+.formCalcular .btnCalcular {
+    width: 50%;
+    margin: 0 auto;
+    padding: .8rem;
+    font-size: 2rem;
+    font-family: var(--chelsea);
+    color: #fff;
+    background: transparent;
+    border-radius: .8rem;
+    border: none;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    transition: .2s;
+}
+.formCalcular .btnCalcular:hover {
+    background: #a945c7;
+    box-shadow: 0 0 1rem #a945c7,
+     0 0 4rem #a945c7,
+     0 0 8rem #a945c7;
+     transition: all .3s ease;
+     transition-delay: .4s;
+     color: aqua;
+}
+.formCalcular .btnCalcular span {
+    position: absolute;
+    width: 100%;
+    background: #000;
+    display: inline-block;
+}
+#span1 {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: .2rem;
+    background: linear-gradient(90deg, transparent, #a945c7);
+}
+.formCalcular .btnCalcular:hover #span1 {
+    left: 100%;
+    transition: 1s;
+}
+#span3 {
+    bottom: -1.5rem;
+    right: -100%;
+    width: 100%;
+    height: .2rem;
+    background: linear-gradient(270deg, transparent, #a945c7);
+}
+.formCalcular .btnCalcular:hover #span3 {
+    right: 100%;
+    transition: 1s;
+}
+#span2 {
+    top: -100%;
+    right: 0;
+    width: .2rem;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #a945c7);
+}
+.formCalcular .btnCalcular:hover #span2 {
+    top: 100%;
+    transition: 1s;
+}
+#span4 {
+    bottom: -100%;
+    left: 0;
+    width: .2rem;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #a945c7);
+}
+.formCalcular .btnCalcular:hover #span4 {
+    bottom: 100%;
+    transition: 1s;
+}
+
+.formCalcular .resultado {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--gaby);
+    text-align: center;
+}
+.formCalcular .resultado b {
+    font-size: 2rem;
+}
+
+

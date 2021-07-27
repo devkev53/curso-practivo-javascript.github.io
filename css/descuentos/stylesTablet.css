@@ -1,0 +1,13 @@
+section {
+    width: 70%;
+    min-height: calc(100vh - 5rem);
+    border-right: 1rem solid #c2c2c2;
+    border-left: 1rem solid #c2c2c2;
+}
+.titleContainer {
+    padding-top: 7rem;
+}
+
+.formCalcular {
+    max-width: 40rem;
+}
