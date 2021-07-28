@@ -30,17 +30,6 @@ function userCoupon() {
 }
 
 
-/*function cuponValid(ic) {
-    if (!coupons.includes(ic)) {
-        alert('El cupon ' + ic + ' no es valido')
-    } else if () {
-
-    } else if () {
-
-    } else if () {
-        
-    }
-}*/
 
 btnCupon.addEventListener('click', () => {
     btnCupon.classList.toggle('active');

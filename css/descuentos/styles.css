@@ -210,42 +210,6 @@ section {
 }
 
 
-
-/* Select */
-/* .descuentoForm_select {
-    display: flex;
-    padding: .5rem;
-    margin-top: -1rem;
-    align-items: center;
-    margin-bottom: .5rem;
-    background-color: rgba(219, 58, 0, 0.87);
-    border-radius: .8rem;
-
-}
-.descuentoForm_select label {
-    width: 50%;
-}
-.descuentoForm_select select {
-    width: 70%;
-    padding: .5rem;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-family: var(--chelsea);
-    color: #fff;
-    font-weight: 900;
-}
-
-.descuentoForm_select select:focus option {
-    background-color: rgba(219, 58, 0, 0.57);
-
-    color: #000;
-    border-radius: .8rem;
-} */
-
-
-
-
 .formCalcular .btnCalcular {
     width: 50%;
     margin: 0 auto;
