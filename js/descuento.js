@@ -6,22 +6,21 @@ var valueCupon = document.getElementById('inputCupon').value;
 var btnCupon = document.getElementById('cuponBtn');
 var form = document.querySelector('.formCalcular');
 var forCupon = false;
-const coupons = [
-    {
-        name:"JuanDC_es_Batman",
+const coupons = [{
+        name: "JuanDC_es_Batman",
         discount: 15,
     },
     {
-        name:"pero_no_le_digas_a_nadie",
+        name: "pero_no_le_digas_a_nadie",
         discount: 30,
     },
     {
-        name:"es_un_secreto",
+        name: "es_un_secreto",
         discount: 25,
     }
 ];
 
-const  isCouponValueValid = function(c) {
+const isCouponValueValid = function(c) {
     return c.name === cupon.value;
 }
 
@@ -34,7 +33,6 @@ function userCoupon() {
 btnCupon.addEventListener('click', () => {
     btnCupon.classList.toggle('active');
     form.classList.toggle('cupon');
-    forCupon = true;
 });
 
 function valNum(e) {
@@ -51,11 +49,11 @@ function descuento(desc) {
     var price = parseFloat(document.getElementById('inputPrice').value);
     var porcentajeDescuento = 100 - parseFloat(desc);
     var newPrice = (price * porcentajeDescuento) / 100;
-    console.log("Tipo: " + typeof(newPrice)+" Valor: "+ newPrice)
+    console.log("Tipo: " + typeof(newPrice) + " Valor: " + newPrice)
     if (isNaN(newPrice)) {
         alert('Verifica los datos ingresados..!')
         return false
-    } else if (newPrice <= 0) { 
+    } else if (newPrice <= 0) {
         alert('Verifica los datos ingresados..!')
         return false
     }
@@ -68,16 +66,21 @@ function descuentoConCupon(cupon) {
         alert('Verifica los datos ingresados..!');
         return false;
     } else {
-        return descuento(cupon.discount)   
-    } 
+        return descuento(cupon.discount)
+    }
 }
 
 function calcularDescuento() {
     var newPrice;
     var desc;
+    if (form.classList.contains('cupon')) {
+        forCupon = true;
+    } else {
+        forCupon = false;
+    }
     if (forCupon) {
         if (!userCoupon()) {
-            alert("El cupon "+ valueCupon +" no es valido..!")
+            alert("El cupon " + valueCupon + " no es valido..!")
         } else {
             discount = userCoupon();
             newPrice = descuentoConCupon(discount);
@@ -87,11 +90,11 @@ function calcularDescuento() {
         newPrice = descuento(desc);
     }
     var response = '<h3>El nuevo precio es de: <b>' +
-        newPrice +'</b></h3>'
+        newPrice + '</b></h3>'
     if (newPrice) {
         resultadoHtml.innerHTML = response
     } else {
         return false
     }
-    
+
 }
