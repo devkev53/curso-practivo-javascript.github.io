@@ -46,10 +46,35 @@
                         <p>Estadisticas</p>
                     </li>
                 </a>
+                <a href="estadisticas.html" class="navbar_list_link">
+                    <li class="navbar_list_link-element"><i class="fal fa-coins"></i>
+                        <p>Taller 4</p>
+                    </li>
+                </a>
             </ul>
         </nav>
     </header>
-
+    <!-- Contenido Principal -->
+    <main>
+        <section>
+            <div>
+                <h1>Calculos estadisticos</h1>
+                <p>Promedio | Mediana | Moda</p>
+                <div class="inputs">
+                    <p>Ingresa un numero para sumarlo a la lista..!</p>
+                    <input id="inputNumber" type="number" required>
+                    <button type="button" onclick="sendToList()">Agregar</button>
+                </div>
+                <p>Mi Lista: <span id="miLista"></span></p>
+                <button onclick="calcularEstadisticas()">Calcular</button>
+                <div class="respuestas">
+                    <p class="promedio">Promedio: <span class="respPromedio"></span></p>
+                    <p class="mediana">Mediana: <span class="respMediana"></span></p>
+                    <p class="moda">Moda: <span class="respModa"></span></p>
+                </div>
+            </div>
+        </section>
+    </main>
     <!-- Pie de Pagina -->
     <footer>
         <div class="footer_conatinerInfo">
