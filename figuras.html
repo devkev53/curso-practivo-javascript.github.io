@@ -1,127 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talleres JS | Curso practico de JS</title>
-    <!-- Title Icon -->
-    <link rel="shortcut icon" href="./assets/kp_black.ico" />
-    <!-- JQueryConfirm -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <title>Figuras Geómetricas | KodePrint</title>
     <!-- Font Awesome -->
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet">
-    <!-- Mi CSS -->
-    <link rel="stylesheet" href="./css/figuras/styles.css">
-    <link rel="stylesheet" href="./css/figuras/styles768.css">
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Gabriela&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <!-- JQueryConfirm -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <!-- Navbar y Footer -->
+    <link rel="stylesheet" href="./css/index/index.css">
+    <!-- Estilos de figuras -->
+    <link rel="stylesheet" href="./css/figuras/figuras.css">
+    <link rel="stylesheet" href="./css/figuras/figurasTablet.css" media="(min-width: 1024px)">
 </head>
-<body class="index body">
-    <header class="header">
-        <!-- Navbar -->
-        <nav class="header_navbar">
-            <a href="./index.html" class="header_navbar_logo">
-                <picture>
-                    <img src="./assets/kp_white.png" alt="">
-                    <h2>KodePrint</h2>
-                </picture>
+
+<body>
+    <!-- Cabecera -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="navbar_logoLink">
+                <img src="./assets/kp_white.png" class="navbar_logoLink-img" alt="KodePrint">
+                <p>KodePrint</p>
             </a>
-            <ul class="header_navbar_list">
-                <a href="./figuras.html" class="header_navbar_list_link">
-                    <li class="header_navbar_list_link-element">
-                        <i class="fad fa-shapes"></i><span>Taller #1</span>
+            <ul class="navbar_list">
+                <a href="figuras.html" class="navbar_list_link">
+                    <li class="navbar_list_link-element"><i class="far fa-shapes"></i>
+                        <p>Figuras</p>
                     </li>
                 </a>
-                <a href="./descuentos.html" class="header_navbar_list_link">
-                    <li class="header_navbar_list_link-element">
-                        <i class="fad fa-percent"></i><span>Taller #2</span>
+                <a href="descuentos.html" class="navbar_list_link">
+                    <li class="navbar_list_link-element"><i class="far fa-percent"></i>
+                        <p>Descuentos</p>
                     </li>
                 </a>
-                <a href="" class="header_navbar_list_link">
-                    <li class="header_navbar_list_link-element">
-                        <i>?</i> <span>Taller #3</span>
+                <a href="estadisticas.html" class="navbar_list_link">
+                    <li class="navbar_list_link-element"><i class="far fa-function"></i>
+                        <p>Estadisticas</p>
                     </li>
                 </a>
             </ul>
         </nav>
     </header>
-    <main class="main">
-        <section class="main_title">
-            <picture class="main_title_containerPciture">
-                <img src="./assets/shapes.svg" alt="">
-                <h1>Figuras Geométricas</h1>
-            </picture>
-            <span>Calcula el área y perímetro de tu figura geométrica..!</span>
-            <div class="main_shapes">
-                <span class="main_shapes-span">Selecciona la figura</span>
-                <div class="main_shapes_container">
-                    <button class="square"><i class="fad fa-square-full"></i></button>
-                    <button class="triangle selected"><i class="fad fa-triangle"></i></button>
-                    <button class="circle"><i class="fad fa-circle"></i></button>
-                </div>
+    <!-- Contenido Principal -->
+    <main>
+        <section class="shapesContainer">
+            <div class="shapesContainer_titleContainer">
+                <img src="./assets/triangle.png" alt="">
+                <h1>Figuras Geometricas</h1>
+                <p>Este es el primer taller de curso practico de JS</p>
+            </div>
+            <div class="shapesContainer_buttonsShapesSelect">
+
+            </div>
+            <div class="shapesContainer_boxForms">
+                <!-- Cuadrado -->
+                <form action="" class="square shapeForm">
+                    <h3 class="title"><i class="fad fa-square-full"></i>Cuadrado</h3>
+                    <p>Ingresa la informacion de tu figura..!</p>
+                    <div class="shapeForm_input">
+                        <input type="number" id="inputSquare" onkeypress="return validarNum(event)" required min="0" step="0.01">
+                        <label><span>Medida:</span></label>
+                    </div>
+                    <div class="buttonsMath_Container">
+                        <button type="button" class="perimetro btnShape" onclick="calcularPerimetroCuadrado()">Perimetro</button>
+                        <button type="button" class="area btnShape" onclick="calcularPerimetroArea()">Area</button>
+                    </div>
+                </form>
+                <!-- Triangulo -->
+                <form action="" class="triangle shapeForm">
+                    <h3 class="title"><i class="fad fa-triangle"></i>Triangulo</h3>
+                    <p>Ingresa la informacion de tu figura..!</p>
+                    <div class="triangleType">
+                        <label for="tipoTriangle">Tipo de triangulo:</label>
+                        <select name="tipoTriangle" id="tipoTriangle">
+                            <option value="1">Equilatero</option>
+                            <option value="2">Isoceles</option>
+                            <option value="3">Escaleno</option>
+                        </select>
+                    </div>
+                    <div class="ladosTriangulo">
+                        <div class="shapeForm_input uno">
+                            <input type="number" id="sideA" required pattern="[1-9]">
+                            <label><span>Lado A:</span></label>
+                        </div>
+                        <div class="shapeForm_input dos">
+                            <input type="number" id="sideB" required pattern="[1-9]">
+                            <label><span>Lado B:</span></label>
+                        </div>
+                        <div class="shapeForm_input tres">
+                            <input type="number" id="base" required pattern="[1-9]">
+                            <label><span>Base:</span></label>
+                        </div>
+                    </div>
+                    <div class="buttonsMath_Container">
+                        <button type="button" onclick="calcularPerimetroTriangulo()" class="perimetro btnShape">Perimetro</button>
+                        <button type="button" onclick="calcularAlturaTriangulo()" class="area btnShape">Area</button>
+                    </div>
+                </form>
+                <!-- Circulo -->
+                <form action="" class="circle shapeForm">
+                    <h3 class="title"><i class="fad fa-circle"></i>Circulo</h3>
+                    <p>Ingresa la informacion de tu figura..!</p>
+                    <div class="shapeForm_input">
+                        <input id="inputCirculo" type="number" required pattern="[1-9]">
+                        <label><span>Medida:</span></label>
+                    </div>
+                    <div class="buttonsMath_Container">
+                        <button type="button" onclick="calcularPerimetroCirculo()" class="perimetro btnShape">Perimetro</button>
+                        <button type="button" onclick="calcularAreaCirculo()" class="area btnShape">Area</button>
+                    </div>
+                </form>
             </div>
         </section>
-        <section class="main_container">
-            <!-- Cuadrado -->
-            <form action="" class="main_container_formSquare formShape">
-                <h2><i class="fad fa-square-full"></i>Cuadrado</h2>
-                <div class="main_container_formSquare_lados">
-                    <label for="ladosCuadrado">Ingresa cuanto mide cada lado:</label>
-                    <input type="number" id="ladosCuadrado">
-                </div>
-                <div class="formShape_buttons">
-                    <button type="button" class="main_container_form-perimetro" onclick="calcularPerimetroCuadrado()">Calcular Perimetro</button>
-                    <button type="button" class="main_container_form-area" onclick="calcularAreaCuadrado()">Calcular Area</button>
-                </div>
-            </form>
-            <!-- Triangulo -->
-            <form action="" class="main_container_formTriangle formShape">
-                <h2><i class="fad fa-triangle"></i>Triangulo</h2>
-                <span>Ingresa cada uno de los lados del triangulo</span>
-                <div class="main_container_formTriangle_lados">
-                    <div class="main_container_formTriangle_ladoUno">
-                        <label for="ladoUno">a):</label>
-                        <input type="number" id="ladoUno">
-                    </div>
-                    <div class="main_container_formTriangle_ladoDos">
-                        <label for="ladoDos">c):</label>
-                        <input type="number" id="ladoDos">
-                    </div>
-                    <div class="main_container_formTriangle_base">
-                        <label for="base">Base):</label>
-                        <input type="number" id="base">
-                    </div>
-                </div>
-                <div class="formShape_buttons">
-                    <button type="button" onclick="calcularPerimetroTriangulo()" class="main_container_form-perimetro">Calcular Perimetro</button>
-                    <button type="button" onclick="calcularAreaTriangulo()" class="main_container_form-area">Calcular Area</button>
-                </div>
-            </form>
-            <!-- Circulo -->
-            <form action="" class="main_container_formCircle formShape">
-                <h2><i class="fad fa-circle"></i>Circulo</h2>
-                <div class="main_container_formSquare_lados">
-                    <label for="ladosCuadrado">Ingresa cuanto mide el radio:</label>
-                    <input type="number" id="radio">
-                </div>
-                <div class="formShape_buttons">
-                    <button type="button" onclick="calcularPerimetroCirculo()" class="main_container_form-perimetro">Calcular Perimetro</button>
-                    <button type="button" onclick="calcularAreaCirculo()" class="main_container_form-area">Calcular Area</button>
-                </div>
-            </form>
-        </section>
     </main>
-    <footer class="footer">
-        <ul class="footer_container">
-            <a href="https://www.linkedin.com/in/kevin-alberto-palma-ralda-319968187/" target="blank" class="footer_container_link"><li class="footer_container_link-element"><i class="fab fa-linkedin"></i></li></a>
-            <a href="https://github.com/kapr53" class="footer_container_link" target="blank"><li class="footer_container_link-element"><i class="fab fa-github-square"></i></li></a>
-            <a href="https://www.youtube.com/channel/UCOpeOsGznEZhwUsDu6-srBw/featured" class="footer_container_link" target="blank"><li class="footer_container_link-element"><i class="fab fa-youtube-square"></i></li></a>
-        </ul>
-        <div class="footer_info">KodePrint &copy; 2021 | Kevin Palma</div>
+
+    <!-- Pie de Pagina -->
+    <footer>
+        <div class="footer_conatinerInfo">
+            <p>KodePrint &copy; 2021 | Kevin Palma &copy; 2021</p>
+        </div>
+        <div class="footer_conatinerLinks">
+            <a href="" class="Linkedin"><i class="fab fa-linkedin"></i><span>Linkedin</span></a>
+            <a href="" class="Github"><i class="fab fa-github"></i><span>Github</span></a>
+            <a href="" class="Youtube"><i class="fab fa-youtube"></i><span>Youtube</span></a>
+        </div>
     </footer>
+    <!-- JQueryConfirm -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <!-- -------------------------------------------------------------- -->
+    <!-- Agregando Scripts -->
+    <script src="./js/main.js"></script>
+    <script src="./js/shapes.js"></script>
 </body>
-<script src="./js/jquery-3.6.0.min.js"></script>
-<!-- JQueryConfirm -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
-<!-- Mis Querys -->
-<script src="./js/figuras.js"></script>
+
 </html>

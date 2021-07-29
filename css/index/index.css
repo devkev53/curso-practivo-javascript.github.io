@@ -1,0 +1,229 @@
+:root {
+    --color_1: #f1e3cc;
+    --color_3: #ff4e62;
+    --color_4: #ffb338;
+    --bg_color: #0e242f;
+    --bg_color2: #181717;
+    --bg_color3: #343d5b;
+    /* Fuentes */
+    --chelsea: 'Chelsea Market', cursive;
+    --gaby: 'Gabriela', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+header {
+    z-index: 4;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 6rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 8%;
+    color: #f2f2f2;
+    background: var(--bg_color);
+    z-index: 4;
+}
+
+.navbar .navbar_logoLink {
+    width: 7rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #f2f2f2;
+    font-family: var(--chelsea);
+    font-size: 2.4rem;
+}
+
+.navbar .navbar_logoLink p {
+    display: none;
+    transition: .3s all ease;
+}
+
+.navbar .navbar_logoLink .navbar_logoLink-img {
+    width: 4.5rem;
+    height: 100%;
+    margin-right: 1rem;
+    transition: .3s all ease;
+}
+
+.navbar .navbar_logoLink:hover .navbar_logoLink-img {
+    transform: rotate(-25deg);
+}
+
+.navbar .navbar_logoLink:hover p {
+    transform: scale(110%);
+}
+
+.navbar_list {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.navbar_list .navbar_list_link {
+    font-family: var(--chelsea);
+    font-size: 3rem;
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #f2f2f2;
+    text-decoration: none;
+    transition: .3s all ease;
+}
+
+.navbar_list .navbar_list_link:hover {
+    transform: rotate(-25deg);
+    color: gray;
+}
+
+.navbar_list .navbar_list_link .navbar_list_link-element p {
+    display: none;
+}
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    padding: 1rem 8%;
+    top: 0;
+    background: var(--bg_color2);
+    color: #f2f2f2;
+    font-size: 1.6rem;
+}
+
+.footer_conatinerLinks,
+.footer_conatinerInfo {
+    display: flex;
+    width: auto;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.footer_conatinerLinks {
+    position: absolute;
+    right: 0;
+    width: 40%;
+    padding-right: 8%;
+}
+
+.footer_conatinerLinks a {
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.footer_conatinerLinks .Linkedin {
+    color: #0e76a8;
+}
+
+.footer_conatinerLinks .Youtube {
+    color: #c4302b;
+}
+
+.footer_conatinerLinks .Github {
+    color: purple;
+}
+
+.footer_conatinerLinks a span {
+    display: none;
+    color: #f2f2f2;
+}
+
+.footer_conatinerLinks a:hover i {
+    transform: scale(150%);
+    transition: .3s all ease;
+}
+
+@media (min-width: 1024px) {
+    .navbar {
+        top: 0;
+    }
+    .navbar .navbar_logoLink {
+        width: 40%;
+    }
+    .navbar .navbar_logoLink p {
+        display: unset;
+        margin-right: 1rem;
+    }
+    .navbar_list {
+        width: auto;
+    }
+    .navbar_list .navbar_list_link {
+        width: 20rem;
+        font-size: 1.6rem;
+    }
+    .navbar_list .navbar_list_link:hover {
+        transform: rotate(0deg);
+        background: var(--color_4);
+        color: var(--bg_color2);
+        /* transform: scale(110%); */
+    }
+    .navbar_list .navbar_list_link .navbar_list_link-element p {
+        display: unset;
+        margin-left: 1rem;
+        transition: .3s all ease;
+    }
+    .navbar_list .navbar_list_link:hover .navbar_list_link-element p {
+        font-size: 2rem;
+    }
+    .navbar_list .navbar_list_link .navbar_list_link-element i {
+        font-size: 2rem;
+    }
+    /* footer */
+    footer {
+        top: unset;
+        bottom: 0;
+        padding: 0 8%;
+        font-size: 1.8rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer_conatinerInfo {
+        width: 100%;
+        order: 2;
+    }
+    .footer_conatinerLinks {
+        width: 30%;
+        justify-content: space-around;
+        position: relative;
+        padding-right: 0;
+    }
+    .footer_conatinerLinks a span {
+        display: unset;
+        margin: 1rem;
+        margin-left: .5rem;
+        margin-right: 2rem;
+    }
+    .footer_conatinerLinks a:hover span {
+        color: var(--color_4);
+        transition: .3s all ease;
+    }
+}

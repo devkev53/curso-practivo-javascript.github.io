@@ -1,0 +1,246 @@
+:root {
+    --color_1: #5a8dda;
+    --color_2: #ff4e62;
+    --color_3: #ffb338;
+    
+    /* Fuentes */
+    --chelsea: 'Chelsea Market', cursive;
+    --gaby: 'Gabriela', serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    background:#c2c2c2;
+    background-image: url('../../assets/shapes.jpg');
+}
+main {
+    margin: 6rem auto 5rem auto;
+    min-width: 27rem;
+    max-width: 100%;
+}
+.shapesContainer {
+    width: 100%;
+}
+.shapesContainer_titleContainer {
+    font-family: var(--chelsea);
+    font-size: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.shapesContainer_titleContainer h1 {
+    font-size: 2.4rem;
+    width: auto;
+}
+.shapesContainer_titleContainer p {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+}
+.shapesContainer_titleContainer img {
+    width: 15%;
+    max-width: 10rem;
+}
+
+
+/* Contenedor de los formularios o Slide */
+.shapesContainer_boxForms {
+    font-size: 1.6rem;
+    display: flex;
+    margin: 1rem 0;
+    position: relative;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    overflow-y: hidden;
+}
+
+.shapesContainer_boxForms .shapeForm {
+    scroll-snap-align: center;
+    min-height: 25rem;
+    max-height: 50%;
+    min-width: 80%;
+    margin: 2rem 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    border-radius: .8rem;
+    box-shadow: 0 .5rem .8rem #000, .5rem 0 .8rem #000;
+}
+.triangle .ladosTriangulo {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.triangle .ladosTriangulo .dos,
+.triangle .ladosTriangulo .uno {
+    display: none;
+}
+
+.shapeForm_input {
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin-bottom: 1.2rem;
+    font-family: var(--chelsea);
+    transition: all .3s ease;
+}
+.shapeForm_input input {
+    width: 100%;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    margin-bottom: .2rem;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #f2f2f2;
+    position: relative;
+}
+.shapeForm_input label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: .1rem solid #f2f2f2;
+    border-radius: .2rem;
+    transition: .3s all ease;
+}
+.shapeForm_input label::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -.1rem;
+    width: 0%;
+    height: 100%;
+    border-bottom: .3rem solid var(--color_3);
+    border-radius: .2rem;
+    /* transform: translateX(-100%); */
+    transition: all .3s ease;
+}
+.shapeForm_input label span {
+    position: absolute;
+    left: 1rem;
+    margin-bottom: .1rem;
+    transition: all .3s ease;
+}
+.shapeForm_input input:focus + label span, 
+.shapeForm_input input:valid + label span {
+    transform: translateY(-100%);
+    font-size: 1rem;
+    color: var(--color_3);
+    text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 0.8);
+    margin-bottom: .5rem;
+}
+.shapeForm_input input:focus + label::after,
+.shapeForm_input input:valid + label::after {
+    /* transform: translateX(0%); */
+    width: 100%;
+}
+
+
+.shapesContainer_boxForms .shapeForm h3 {
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+}
+.shapesContainer_boxForms .shapeForm h3 i {
+    margin-right: 1rem;
+    font-size: 4rem;
+}
+.shapesContainer_boxForms .square {
+    background: linear-gradient(427deg, var(--color_2), rgba(158, 157, 157, 0.5));
+}
+.shapesContainer_boxForms .triangle {
+    background: linear-gradient(427deg, var(--color_3), rgba(158, 157, 157, 0.5));
+    color: #000;
+}
+.shapesContainer_boxForms .circle {
+    background: linear-gradient(427deg, var(--color_1), rgba(158, 157, 157, 0.5));
+}
+.square .shapeForm_input label::after {
+    border-bottom: .3rem solid var(--color_1);
+
+}
+.square .shapeForm_input input:focus + label span, 
+.square .shapeForm_input input:valid + label span {
+    color: var(--color_1);
+}
+.triangle .shapeForm_input label::after {
+    border-bottom: .3rem solid var(--color_2);
+
+}
+.triangle .shapeForm_input input:focus + label span, 
+.triangle .shapeForm_input input:valid + label span {
+    color: var(--color_2);  
+}
+.triangle .triangleType {
+    display: flex;
+    width: 100%;
+    margin: .5rem 0 1.5rem 0;
+}
+.triangle .triangleType option {
+    width: 100%;
+}
+.triangleType {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--chelsea);
+    font-size: 1rem;
+    background-image: linear-gradient(to right, #ffff, #c2c2c2);
+    border-radius: .4rem;
+    padding: .5rem;
+}
+.triangleType label {
+    width: 100%;
+}
+.triangleType select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-family: var(--chelsea);
+}
+.triangleType option {
+    width: 100%;
+    font-family: var(--chelsea);
+}
+
+
+.shapesContainer_boxForms .buttonsMath_Container {
+    display: flex;
+    width:90%;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.shapesContainer_boxForms .buttonsMath_Container .btnShape {
+    width: 45%;
+    padding: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    border: none;
+    border-radius: 5rem;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(to right, transparent 50%, rgb(117, 214, 146) 50%);
+    background-size: 200%;
+    background-position: left;
+    box-shadow: .1rem .5rem .5rem rgba(78, 29, 85, .9), .1rem 0 .5rem rgba(0, 0, 0, 0.9);
+    transition: all .3s ease;
+}
+.shapesContainer_boxForms .buttonsMath_Container .btnShape:hover {
+    background-position: right;
+    color: rgba(132, 47, 143, 0.9);
+}
+
