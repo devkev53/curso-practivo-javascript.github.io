@@ -17,19 +17,30 @@ inputNumber.addEventListener("keyup", function(e) {
 
 // Funcion para agregar a la lista los numeros del input
 function sendToList() {
-    miList.push(parseFloat(inputNumber.value));
-    miListaHtml.innerText = miList;
-    inputNumber.value = "";
+    if (isNaN(parseFloat(inputNumber.value))) {
+        return false;
+    } else {
+        miList.push(parseFloat(inputNumber.value));
+        miListaHtml.innerText = miList;
+        inputNumber.value = "";
+        inputNumber.focus();
+    }
+    
 }
 
 // Funcion para mostar en el html las respuestas
 function calcularEstadisticas() {
-    let media = calcularMediaAritmetica(miList);
-    let mediana = calcularMediana(miList);
-    let moda = calcularMediana(miList);
-    respPromedio.innerText = media;
-    respMediana.innerText = mediana;
-    respModa.innerText = moda;
+    console.log(miList.length);
+    if (miList.length === 0) {
+        miListaHtml.innerText = "Tu lista se encuentra vacia..!";
+    } else {
+        let media = calcularMediaAritmetica(miList);
+        let mediana = calcularMediana(miList);
+        let moda = calcularMediana(miList);
+        respPromedio.innerText = media;
+        respMediana.innerText = mediana;
+        respModa.innerText = moda;
+    }
 }
 
 // ------------- FUNCION PARA LA MEDIA ARITMETICA -----------

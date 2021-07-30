@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./css/index/index.css">
     <!-- Estilos de figuras -->
     <link rel="stylesheet" href="./css/estadisticas/styles.css">
-    <link rel="stylesheet" href="./css/estadisticas/styles.css" media="(min-width: 1024px)">
+    <link rel="stylesheet" href="./css/estadisticas/stylesTablet.css" media="(min-width: 1024px)">
 </head>
 
 <body>
@@ -46,7 +46,7 @@
                         <p>Estadisticas</p>
                     </li>
                 </a>
-                <a href="estadisticas.html" class="navbar_list_link">
+                <a href="salario.html" class="navbar_list_link">
                     <li class="navbar_list_link-element"><i class="fal fa-coins"></i>
                         <p>Taller 4</p>
                     </li>
@@ -57,20 +57,27 @@
     <!-- Contenido Principal -->
     <main>
         <section>
-            <div>
-                <h1>Calculos estadisticos</h1>
-                <p>Promedio | Mediana | Moda</p>
-                <div class="inputs">
-                    <p>Ingresa un numero para sumarlo a la lista..!</p>
-                    <input id="inputNumber" type="number" required>
-                    <button type="button" onclick="sendToList()">Agregar</button>
+            <div class="calculador">
+                <div class="title">
+                    <img src="./assets/math.png" alt="">
+                    <h1>Calculos Estadisticos</h1>
                 </div>
-                <p>Mi Lista: <span id="miLista"></span></p>
-                <button onclick="calcularEstadisticas()">Calcular</button>
+                <p class="subtitle"><span class="s-1">Promedio</span> | <span class="s-2">Mediana</span> | <span class="s-3">Moda</span></p>
+                <div class="container">
+                    <div class="inputs">
+                        <p>Ingresa un numero para sumarlo a la lista..!</p>
+                        <input id="inputNumber" type="number" required>
+                        <button type="button" onclick="sendToList()"><i class="fad fa-plus"></i>Agregar</button>
+                    </div>
+                    <span class="lista">Mi Lista: <span id="miLista"></span></span>
+                    <button class="calculaeBtn" onclick="calcularEstadisticas()"><i class="fas fa-calculator-alt"></i>Calcular</button>
+                </div>
                 <div class="respuestas">
                     <p class="promedio">Promedio: <span class="respPromedio"></span></p>
-                    <p class="mediana">Mediana: <span class="respMediana"></span></p>
-                    <p class="moda">Moda: <span class="respModa"></span></p>
+                    <div>
+                        <p class="mediana">Mediana: <span class="respMediana"></span></p>
+                        <p class="moda">Moda: <span class="respModa"></span></p>
+                    </div>
                 </div>
             </div>
         </section>
