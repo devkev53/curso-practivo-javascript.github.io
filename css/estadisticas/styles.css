@@ -101,36 +101,32 @@ section {
     margin-bottom: .7rem;
 }
 .calculador .inputs input {
-    width: 30%;
-    padding: .5rem 1rem;
-    border-bottom-left-radius: .5rem;
-    border-top-left-radius: .5rem;
-    height: 2rem;
+    width: 40%;
+    padding: 1rem;
+    border-radius: 2.5rem 0 0 2.5rem;
     outline: none;
     border: none;
-    box-shadow: 0 .4rem .6rem #000;
 }
 .calculador .inputs button i {
     margin-right: .5rem;
 }
 .calculador .inputs button {
-    width: 25%;
+    width: 40%;
     font-size: 1rem;
-    height: 2rem;
+    border-radius: 0 2.5rem 2.5rem 0;
     border: none;
-    border-left: .4rem solid #0d8d73;
-    border-top-right-radius: .5rem;
-    border-bottom-right-radius: .5rem;
-    background: #16A085;
+    border-left: .4rem solid #fae078;
+    background: #fff107;
+    font-size: 1.4rem;
     font-family: var(--gaby);
-    color: white;
-    transition: all .2s ease;
-    box-shadow: 0 .4rem .6rem #000;
+    color: blue;
+    transition: all .3s ease;
     /* background-image: linear-gradient(to right, #16A085 0%, #F4D03F  51%, #16A085  100%) */
 }
 .calculador .inputs button:hover {
     background: #fae078;
     border-left: .4rem solid #d8b630;
+    color: green;
 }
 
 
@@ -142,6 +138,8 @@ section {
     justify-content: center;
     font-size: 1.8rem;
     max-width: 50rem;
+    color: floralwhite;
+    text-shadow: .1rem .1rem .2rem #000;
 }
 .lista span {
     display: inline-block;
@@ -155,11 +153,113 @@ section {
     margin-right: 1rem;
 }
 
-.calculaeBtn {
-    width: 80%;
-    padding: .6rem;
+.calculaeBtn, .nuevoBtn {
+    padding: 1rem;
     font-family: var(--chelsea);
     font-weight: bold;
-    border-radius: .6rem;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 1rem .8rem;
     border: none;
+    position: relative;
+    color: #566473;
+    transition:all .6s ease;
+
+}
+.nuevoBtn {
+    color: blue;
+}
+.calculaeBtn::after,
+.nuevoBtn::after,
+.nuevoBtn::before,
+.calculaeBtn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: .2rem solid;
+    transition:all .6s ease;
+    border-radius:2px
+}
+.calculaeBtn::after {
+    bottom: 0;
+    right: 0;
+    border-color: transparent #566473 #566473 transparent;
+}
+.nuevoBtn::after {
+    bottom: 0;
+    right: 0;
+    border-color: transparent blue blue transparent;
+}
+.nuevoBtn::before {
+    top: 0;
+    left: 0;
+    border-color: blue transparent transparent blue;
+}
+.calculaeBtn::before {
+    top: 0;
+    left: 0;
+    border-color: #566473 transparent transparent #566473;
+}
+.calculaeBtn:hover::after,
+.calculaeBtn:hover::before {
+    width: 100%;
+    height: 100%;
+}
+.nuevoBtn:hover::after,
+.nuevoBtn:hover::before {
+    width: 100%;
+    height: 100%;
+    border-color: blue;
+}
+.calculaeBtn:hover {
+    background: pink;
+    color: purple;
+}
+.nuevoBtn:hover {
+    background: brown;
+    color: white;
+}
+.nuevoBtn.disabled {
+    color: grey;
+}
+.nuevoBtn.disabled::after {
+    bottom: 0;
+    right: 0;
+    border-color: transparent grey grey transparent;
+}
+.nuevoBtn.disabled::before {
+    top: 0;
+    left: 0;
+    border-color: grey transparent transparent grey;
+}
+.nuevoBtn.disabled:hover::after,
+.nuevoBtn.disabled:hover::before {
+    width: 20%;
+    height: 20%;
+}
+.nuevoBtn.disabled:hover {
+    background: transparent;
+}
+
+
+.respuestas {
+    background: linear-gradient(170deg, transparent, #000);
+    border-radius: 2.5rem;
+}
+.promedio, .mediana, .moda {
+    font-family: var(--chelsea);
+    text-align: center;
+    text-shadow: .2rem .2rem .5rem #000;
+}
+.promedio {
+    color: lightgreen;
+}
+.mediana {
+    color: magenta;
+}
+.moda {
+    color: gold;
 }

@@ -1,3 +1,13 @@
+main {
+    margin: 7rem 0 4rem 0;
+}
 section {
     width: 50rem;
+}
+
+.calculador .inputs input {
+    width: 20%;
+}
+.calculador .inputs button {
+    width: 20%;
 }

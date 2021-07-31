@@ -70,13 +70,18 @@
                         <button type="button" onclick="sendToList()"><i class="fad fa-plus"></i>Agregar</button>
                     </div>
                     <span class="lista">Mi Lista: <span id="miLista"></span></span>
-                    <button class="calculaeBtn" onclick="calcularEstadisticas()"><i class="fas fa-calculator-alt"></i>Calcular</button>
+                    <button class="calculaeBtn" onclick="calcularEstadisticas()">
+                        <i class="fal fa-calculator-alt"></i> Calcular
+                    </button>
+                    <button class="nuevoBtn disabled" disabled onclick="reiniciarVariables()">
+                        <i class="fas fa-eraser"></i> Reiniciar
+                    </button>
                 </div>
                 <div class="respuestas">
-                    <p class="promedio">Promedio: <span class="respPromedio"></span></p>
+                    <p class="promedio"><b>Promedio: </b><span class="respPromedio"></span></p>
                     <div>
-                        <p class="mediana">Mediana: <span class="respMediana"></span></p>
-                        <p class="moda">Moda: <span class="respModa"></span></p>
+                        <p class="mediana"><b>Mediana: </b><span class="respMediana"></span></p>
+                        <p class="moda"><b>Moda: </b><span class="respModa"></span></p>
                     </div>
                 </div>
             </div>
@@ -88,9 +93,9 @@
             <p>KodePrint &copy; 2021 | Kevin Palma &copy; 2021</p>
         </div>
         <div class="footer_conatinerLinks">
-            <a href="" class="Linkedin"><i class="fab fa-linkedin"></i><span>Linkedin</span></a>
-            <a href="" class="Github"><i class="fab fa-github"></i><span>Github</span></a>
-            <a href="" class="Youtube"><i class="fab fa-youtube"></i><span>Youtube</span></a>
+            <a href="https://www.linkedin.com/in/kevin-alberto-palma-ralda-319968187/" target="_blank" class="Linkedin"><i class="fab fa-linkedin"></i><span>Linkedin</span></a>
+            <a href="https://github.com/kapr53" target="_blank" class="Github"><i class="fab fa-github"></i><span>Github</span></a>
+            <a href="https://www.youtube.com/channel/UChLJHiLwbRrdCEsZhU6bMvA" target="_blank" class="Youtube"><i class="fab fa-youtube"></i><span>Youtube</span></a>
         </div>
     </footer>
     <!-- scripts -->

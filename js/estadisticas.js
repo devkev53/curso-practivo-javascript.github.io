@@ -37,12 +37,26 @@ function calcularEstadisticas() {
         let media = calcularMediaAritmetica(miList);
         let mediana = calcularMediana(miList);
         let moda = calcularMediana(miList);
-        respPromedio.innerText = media;
-        respMediana.innerText = mediana;
-        respModa.innerText = moda;
+        let btnReiniciar = document.querySelector(".nuevoBtn");
+        document.querySelector('.respuestas').classList.add
+        respPromedio.innerHTML = "El Promedio tu Lista es: <b>" + media + "</b>";
+        respMediana.innerHTML = "La Mediana de tu Lista es: <b>" + mediana + "</b>";
+        respModa.innerHTML = "La Moda de tu Lista es: <b>" + moda + "</b>";
+        btnReiniciar.classList.remove("disabled");
+        btnReiniciar.removeAttribute("disabled");
     }
 }
 
+function reiniciarVariables() {
+    let btnReiniciar = document.querySelector(".nuevoBtn");
+    miList = [];
+    respPromedio.innerHTML = "";
+    respMediana.innerHTML = "";
+    respModa.innerHTML = "";
+    miListaHtml.innerText = miList;
+    btnReiniciar.classList.add("disabled");
+    btnReiniciar.setAttribute("disabled");
+}
 // ------------- FUNCION PARA LA MEDIA ARITMETICA -----------
 
 // Calcular promedio o media aritmetica
