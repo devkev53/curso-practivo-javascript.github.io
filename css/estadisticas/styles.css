@@ -248,6 +248,7 @@ section {
 .respuestas {
     background: linear-gradient(170deg, transparent, #000);
     border-radius: 2.5rem;
+    padding: 1rem;
 }
 .promedio, .mediana, .moda {
     font-family: var(--chelsea);

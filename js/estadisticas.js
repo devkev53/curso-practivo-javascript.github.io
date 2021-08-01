@@ -36,7 +36,7 @@ function calcularEstadisticas() {
     } else {
         let media = calcularMediaAritmetica(miList);
         let mediana = calcularMediana(miList);
-        let moda = calcularMediana(miList);
+        let moda = calcularModa(miList);
         let btnReiniciar = document.querySelector(".nuevoBtn");
         document.querySelector('.respuestas').classList.add
         respPromedio.innerHTML = "El Promedio tu Lista es: <b>" + media + "</b>";
