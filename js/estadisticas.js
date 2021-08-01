@@ -30,7 +30,6 @@ function sendToList() {
 
 // Funcion para mostar en el html las respuestas
 function calcularEstadisticas() {
-    console.log(miList.length);
     if (miList.length === 0) {
         miListaHtml.innerText = "Tu lista se encuentra vacia..!";
     } else {
@@ -41,7 +40,9 @@ function calcularEstadisticas() {
         document.querySelector('.respuestas').classList.add
         respPromedio.innerHTML = "El Promedio tu Lista es: <b>" + media + "</b>";
         respMediana.innerHTML = "La Mediana de tu Lista es: <b>" + mediana + "</b>";
-        respModa.innerHTML = "La Moda de tu Lista es: <b>" + moda + "</b>";
+        respModa.innerHTML = "" + 
+            "La Moda de tu Lista es: <b>" + moda[0] +
+            "</b> se repite: " + moda[1] + " veces";
         btnReiniciar.classList.remove("disabled");
         btnReiniciar.removeAttribute("disabled");
     }
